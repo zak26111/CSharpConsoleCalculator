@@ -5,10 +5,8 @@ namespace Calculator
 {
     class Calc
     {
-
         static void Main()
         {
-
             bool isExit = false;
 
             while (!isExit)
@@ -17,7 +15,7 @@ namespace Calculator
                 Console.WriteLine("Please enter your choice. 1-Add, 2-Sub, 3-Mul, 4-Division, 5-Exit");
                 int userInput = Convert.ToInt32(Console.ReadLine());
                 int firstNumber = 0, secondNumber = 0;
-                if (userInput != 5)
+                if (userInput >= 1 && userInput<=4 )
                 {
                     Console.WriteLine("Please enter your first number");
                     firstNumber = Convert.ToInt32(Console.ReadLine());
@@ -35,7 +33,7 @@ namespace Calculator
                 }
                 else if (userInput == 2)
                 {
-                    result = "Subtract of " + firstNumber + " - " + secondNumber + " = " + CalculatorDAL.Subtraction(firstNumber, secondNumber);
+                    result = "Substract of " + firstNumber + " - " + secondNumber + " = " + CalculatorDAL.Subtraction(firstNumber, secondNumber);
                 }
                 else if (userInput == 3)
                 {
